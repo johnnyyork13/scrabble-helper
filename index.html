@@ -7,14 +7,41 @@
     <title>Scrabble Helper</title>
 </head>
 <body>
-    <img src="./images/scrabbleLogo.png">
-
-    <div id="setup">
-        <div class="playerCount box">
-            <label>How many players?</label>
-            <input type="number" max="4" min="1">
+    <div class="mainContainer">
+        <img id='logo' src="./images/scrabbleLogo.png">
+        <div id="showScoreDiv"></div>
+        <div id="setup">
+            <div class="playerCount box">
+                <label>How many players?</label>
+                <input id="playerCountInput" type="number" max="4" min="1">
+                <button id='playerCountBtn' type="button">Submit</button>
+            </div>
+            <div id="playerNamesContainer">
+                <h2>Player Names</h2>
+            </div>
         </div>
+        <div id="game">
+            <div class="scoreDiv">
+                <p id="scoreP">Add Points:</p>
+                <input id="score" type="number" placeholder="0">
+            </div>
+            <table>
+                <thead id="gameHeader"></thead>
+                <tbody id="gameBody"></tbody>
+            </table>
+            <button id="nextTurn">Next Round</button>
+        </div>
+        <div id="dictionary">
+            <h2>Dictionary</h2>
+            <div>
+                <input id="wordBox">
+                <button id="definitionBtn">Look Up</button>
+                <p id="definition"></p>
+            </div>
+        </div>
+        <script src="functions.js"></script>
+        <script src="index.js"></script>
+        
     </div>
-    <script src="index.js"></script>
 </body>
 </html>

@@ -37,31 +37,180 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
 
 
 html {
-    width: 99vw;
-    height: 1024px;
+    --orange: rgb(255, 192, 66);
+    --red: rgb(255, 179, 179);
+    --purple: rgb(254, 132, 221);
+    --tan: rgb(248, 228, 181);
+    --blue: rgb(193, 207, 241);
+    width: 800px;
     display: flex;
     justify-content: center;
 }
 
 body {
+    width:100%;
+}
+
+button {
+    background-image: url(./images/tileBG.png);
+}
+
+.mainContainer {
+    background-image: url(./images/woodBG.jpg);
     width: 100%;
-    height: 100%;
-    border: 1px solid red;
+    border: 5px solid rgb(255, 162, 162);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
+    position: relative;
+    z-index: 1;
 }
 
-img {
+body * {
+    position: relative;
+    z-index: 1;
+}
+
+#logo {
     width: 615px;
     height: 151px;
+    margin-bottom: 30px;
+}
+
+#bgImg {
+    position: absolute;
+    top:0;
+    z-index: 0;
+    width: 100%;
+}
+
+
+
+#showScoreDiv {
+    margin-top: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#showScoreDiv div {
+    display: flex;
+    background-color: var(--blue);
+    border: 5px solid rgb(119, 156, 248);
+    font-weight: bold;
+}
+
+#showScoreDiv div p {
+    margin: 5px;
+}
+
+#playerNamesContainer {
+    visibility: hidden;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#playerNamesContainer h2 {
+    font-size: 1.5em;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#playerNamesContainer button {
+    margin-top: 10px;
+}
+
+
+#game {
+    visibility: hidden;
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#game > button {
+    height: 40px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.scoreDiv {
+    height: 50px;
+    position: absolute;
+    top: -60px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.scoreDiv input {
+    height: 30px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+table {
+    width: 100%;
+    border: 2px solid var(--purple);
+    margin-bottom: 20px;
+}
+
+th {
+    border: 2px solid var(--purple);
+    background-color: var(--red);
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+td {
+    text-align: center;
+    background-color: var(--tan);
+    border: 2px solid var(--red);
+    padding-bottom: 5px;
+    vertical-align: middle;
+}
+
+td:hover {
+    background-color: var(--blue);
+    cursor: pointer;
+}
+
+td button {
+    width: 100px;
+}
+
+td button:hover {
+    cursor: pointer;
+    background-image: none;
+}
+
+#nextTurn {
+    width: 100%;
+}
+
+#dictionary {
+    padding-top: 20px;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+#definition {
+    margin-top: 20px;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
 }

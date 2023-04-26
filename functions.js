@@ -42,7 +42,7 @@ async function getWord(word) {
         const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
         const responseData = await response.json();
         const wordMeaning = responseData[0].meanings[0].definitions[0].definition;
-        definition.textContent = `${word}:  ${wordMeaning}`;
+        definition.textContent = `${word} is a word! It means: ${wordMeaning}`;
     } catch (err) {
         definition.textContent = 'Not a valid word.';
     }

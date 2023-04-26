@@ -267,7 +267,7 @@ td button:hover {
 }
 
 #wordBox {
-    width: 200px;
+    width: 65%;
     height: 35px;
     font-weight: bolder;
     font-size: 1.4em;
@@ -275,6 +275,7 @@ td button:hover {
 
 #definitionBtn {
     height: 40px;
+    width: 32%;
     font-size: 1.4em;
     font-weight: bolder;
 }

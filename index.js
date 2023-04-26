@@ -71,7 +71,7 @@ playerCountBtn.addEventListener('click', function() {
 function addNewRow(numPlayers) {
     const tr = document.createElement('tr');
     const rowNum = document.createElement('td');
-    rowNum.textContent = tbody.children.length;
+    rowNum.textContent = tbody.children.length + 1;
     tr.appendChild(rowNum);
     for (let i = 0; i < numPlayers; i++) {
         const td = document.createElement('td');

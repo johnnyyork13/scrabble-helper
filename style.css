@@ -179,7 +179,7 @@ body * {
 .scoreDiv {
     height: 50px;
     position: absolute;
-    top: -60px;
+    top: -70px;
     font-weight: bolder;
     text-align: center;
 }
@@ -188,6 +188,10 @@ body * {
     height: 30px;
     text-align: center;
     font-size: 1.5em;
+}
+
+#scoreP {
+    font-size: 1.4em;
 }
 
 table {

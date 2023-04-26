@@ -37,6 +37,7 @@ function updateScoreboard() {
 }
 
 async function getWord(word) {
+    definition.style.visibility = 'visible';
     try {
         const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
         const responseData = await response.json();

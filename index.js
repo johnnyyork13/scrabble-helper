@@ -18,12 +18,10 @@ playerCountBtn.addEventListener('click', function() {
         for (let i = 0; i < playerCountInput.value; i++) {
             playerNamesContainer.style.visibility = 'visible';
             const nameContainer = document.createElement('div');
-            const nameLabel = document.createElement('label');
             const nameInput = document.createElement('input');
             nameContainer.classList.add('nameBox');
             nameInput.classList.add('nameInput');
-            nameLabel.textContent = `Player ${i+1} Name:`;
-            nameContainer.appendChild(nameLabel);
+            nameInput.placeholder = `Player ${i+1} Name:`;
             nameContainer.appendChild(nameInput);
             playerNamesContainer.appendChild(nameContainer);
         }

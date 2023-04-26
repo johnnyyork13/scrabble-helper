@@ -45,6 +45,8 @@ html {
     --purple: rgb(254, 132, 221);
     --tan: rgb(248, 228, 181);
     --blue: rgb(193, 207, 241);
+    --green: rgb(122, 210, 141);
+    --bad-red: rgb(255, 110, 110);
     width: 800px;
     display: flex;
     justify-content: center;

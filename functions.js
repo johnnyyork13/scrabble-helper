@@ -43,7 +43,9 @@ async function getWord(word) {
         const responseData = await response.json();
         const wordMeaning = responseData[0].meanings[0].definitions[0].definition;
         definition.textContent = `${word} is a word! It means: ${wordMeaning}`;
+        definition.style.backgroundColor = 'var(--green)';
     } catch (err) {
         definition.textContent = 'Not a valid word.';
+        definition.style.backgroundColor = 'var(--bad-red)';
     }
 }

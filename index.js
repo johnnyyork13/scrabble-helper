@@ -96,6 +96,12 @@ nextTurnBtn.addEventListener('click', function() {
     addNewRow(nameInput.length);
 })
 
+let isWord = false;
 definitionBtn.addEventListener('click', function() {
     getWord(wordBox.value);
+    if (isWord) {
+        definition.style.backgroundColor = 'green';
+    } else {
+        definition.style.backgroundColor = 'red';
+    }
 })

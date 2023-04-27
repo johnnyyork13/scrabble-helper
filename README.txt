@@ -1,3 +1,8 @@
+SCRABBLE game score keeper and dictionary. 
+
+
+CODE MECHANICS
+
 This code is defining multiple variables using the document.getElementById method to retrieve elements from the HTML document. These variables represent various elements within the webpage that will be used later on in the script.
 
 The code then retrieves the html and body elements and sets their widths and heights to the viewport dimensions. It then initializes an empty players array.

@@ -13,7 +13,6 @@ function updateScoreboard() {
     if (!addPlayersToScoreboard) {
         for (let i = 0; i < nameInput.length; i++) {
             let e = nameInput[i];
-            console.log(e.value);
             let playerContainer = document.createElement('div');
             let newPlayerName = document.createElement('p');
             let newPlayerScore = document.createElement('p');

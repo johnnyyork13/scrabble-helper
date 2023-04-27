@@ -1,3 +1,4 @@
+const mainContainer = document.getElementById('mainContainer');
 const setup = document.getElementById('setup');
 const playerCountInput = document.getElementById('playerCountInput');
 const playerCountBtn = document.getElementById('playerCountBtn');
@@ -10,6 +11,18 @@ const nextTurnBtn = document.getElementById('nextTurn');
 const definitionBtn = document.getElementById('definitionBtn');
 const wordBox = document.getElementById('wordBox');
 const definition = document.getElementById('definition');
+
+const html = document.getElementsByTagName('html');
+const body = document.getElementsByName('body');
+
+//lets get that viewport width and height
+let width = window.innerWidth;
+let startHeight = window.innerHeight;
+
+//set viewports
+html[0].style.width = `${width}px`;
+html[0].style.height = `${startHeight}px`;
+mainContainer.style.height = `${startHeight}px`;
 
 let players = [];
 
@@ -69,6 +82,8 @@ playerCountBtn.addEventListener('click', function() {
 
 
 function addNewRow(numPlayers) {
+    mainContainer.style.height = `${Number((mainContainer.style.height.slice(0, mainContainer.style.height.length - 2))) + 50}px`;
+    console.log(mainContainer.style.height);
     const tr = document.createElement('tr');
     const rowNum = document.createElement('td');
     rowNum.textContent = tbody.children.length + 1;
@@ -96,12 +111,6 @@ nextTurnBtn.addEventListener('click', function() {
     addNewRow(nameInput.length);
 })
 
-let isWord = false;
 definitionBtn.addEventListener('click', function() {
     getWord(wordBox.value);
-    if (isWord) {
-        definition.style.backgroundColor = 'green';
-    } else {
-        definition.style.backgroundColor = 'red';
-    }
 })
